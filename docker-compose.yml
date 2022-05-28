@@ -5,7 +5,7 @@ services:
     ports:
       - 4000:80
     volumes:
-      - ./Source/:/var/www/html
+      - app:/var/www/html
     network_mode: bridge
   db:
     image: mariadb:latest
@@ -20,3 +20,5 @@ services:
 volumes:
   slotMachineData:
     name: db-data-slot-machine
+  app:
+    name: php-data-slot-machine
